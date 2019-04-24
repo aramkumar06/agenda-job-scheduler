@@ -1,16 +1,24 @@
 const debug = require('debug')('app');
 const express = require('express');
+const graphqlHTTP = require('express-graphql');
 const cors = require('cors');
 const { agenda } = require('./services');
-const { errorHandlerMiddleware } = require('./middlewares');
-const { jobRouter } = require('./routers');
+const { jobSchema } = require('./schemas');
+const { jobResolver } = require('./resolvers');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(jobRouter);
-app.use(errorHandlerMiddleware);
+
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: jobSchema,
+    rootValue: jobResolver,
+    graphiql: true,
+  }),
+);
 
 const start = async () => {
   await agenda.start();
