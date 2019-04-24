@@ -1,1 +1,0 @@
-exports.jobRules = require('./jobRules');

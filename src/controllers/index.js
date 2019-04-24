@@ -1,1 +1,0 @@
-exports.jobController = require('./jobController');
