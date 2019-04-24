@@ -1,0 +1,1 @@
+exports.jobResolver = require('./jobResolver');
