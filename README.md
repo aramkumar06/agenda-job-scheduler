@@ -1,14 +1,14 @@
 # Job scheduler API
 
-### Run the project locally
+## Run the project locally
 
 To run the project locally make sure you have docker installed, then simply run `docker-compose up` from your terminal.
 
-### Endpoints
+## Endpoints
 
 The job scheduler API exposes the following endpoints:
 
-#### Create a job
+### Create a job
 
 `POST /jobs`
 
@@ -34,7 +34,7 @@ The job scheduler API exposes the following endpoints:
 
 ```
 
-#### List all the existing jobs
+### List all the existing jobs
 
 `GET /jobs`
 
