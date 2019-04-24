@@ -1,0 +1,48 @@
+{
+  "name": "job-scheduler",
+  "version": "1.0.0",
+  "description": "A simple job scheduler API based on agenda.",
+  "main": "index.js",
+  "author": "Tamas Pap <tamas@tamaspap.com>",
+  "license": "ISC",
+  "scripts": {
+    "start": "DEBUG=app node src/app.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "agenda": "^2.0.2",
+    "cors": "^2.8.5",
+    "cron-parser": "^2.11.0",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "lodash": "^4.17.11",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "arrow-parens": "off",
+      "consistent-return": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "requirePragma": false,
+    "proseWrap": "preserve"
+  }
+}
