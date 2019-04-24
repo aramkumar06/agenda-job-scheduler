@@ -1,0 +1,1 @@
+exports.jobSchema = require('./jobSchema');
